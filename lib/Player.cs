@@ -1,13 +1,19 @@
+
 using System;
 using System.Collections.Generic;
 
 namespace lib {
     public class Player {
         public int Score { get; set; }
-        public List<Achievement> MyProperty { get; set; }
+        public List<Achievement> Achievments { get; set; }
 
         public override string ToString() {
-            return String.Empty;
+            string str = "";
+            foreach (var achivements in Achievments) {
+                str += achivements.ToString();
+                str += "\n\r";
+            }
+            return str;
         }
     }
 }

@@ -16,5 +16,10 @@ namespace lib {
         public void Unlock() {
             IsUnlocked = false;
         }
+
+        public override string ToString(){
+            string str = $"---<<{_name}>>---";
+            return str;
+        }
     }
 }
