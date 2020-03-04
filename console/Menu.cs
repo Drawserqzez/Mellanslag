@@ -6,6 +6,7 @@ namespace console.Menu {
         public static int DisplayMenu(List<string> menuItems) {            
             int currentIndex = 0;
             while(true) {
+                Console.Clear();
                 foreach (var s in menuItems) {
                     if (menuItems.FindIndex(st => st == s) == currentIndex) {
                         Console.ForegroundColor = ConsoleColor.Blue;

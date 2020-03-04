@@ -1,6 +1,6 @@
 namespace Lib {
     public class Achievement : ISubscriber {
-        public int UnlockLimit;
+        public int UnlockLimit { get; set; }
         public string Name { get; set; }
         public bool Unlocked { get; set; } = false;
 
