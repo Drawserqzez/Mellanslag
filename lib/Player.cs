@@ -3,7 +3,8 @@ using System;
 using System.Collections.Generic;
 
 namespace lib {
-    public class Player {
+    public class Player
+    {
         public int Score { get; set; }
         public List<Achievement> Achievments { get; set; }
 
@@ -15,5 +16,7 @@ namespace lib {
             }
             return str;
         }
+
+
     }
 }
