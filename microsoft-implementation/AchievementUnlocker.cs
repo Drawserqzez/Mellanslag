@@ -31,9 +31,11 @@ namespace Lib
         }
 
         public void OnNext(Achievement value) {
-            if (value.UnlockCondition == _achievementToUnlock.UnlockCondition) {
-                _achievementToUnlock.IsUnlocked = true;
-                System.Console.WriteLine("Unlocked {0}!", _achievementToUnlock.Name);
+            if (!_achievementToUnlock.IsUnlocked) {
+                if (value.UnlockCondition == _achievementToUnlock.UnlockCondition) {
+                    _achievementToUnlock.IsUnlocked = true;
+                    System.Console.WriteLine("Unlocked {0}!", _achievementToUnlock.Name);
+                }
             }
         }
     }
